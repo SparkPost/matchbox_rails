@@ -1,3 +1,563 @@
-.matchbox-test-class {
-  background: orangered;
+/**
+ * Do not edit directly
+ */
+
+$border-radius-0: 0 !default;
+$border-radius-100: 1px !default;
+$border-radius-200: 2px !default;
+$border-radius-pill: 9999em !default;
+$border-radius-circle: 50% !default;
+$border-width-0: 0 !default;
+$border-width-100: 1px !default;
+$border-width-200: 2px !default;
+$color-brand-orange: #fa6423 !default;
+$color-brand-gray: #55555a !default;
+$color-brand-blue: #37aadc !default;
+$color-yellow-100: #fffadb !default;
+$color-yellow-200: #fff4b5 !default;
+$color-yellow-300: #ffe75c !default;
+$color-yellow-400: #ffda00 !default;
+$color-yellow-500: #e3ad0b !default;
+$color-yellow-600: #b58c12 !default;
+$color-yellow-700: #876a2f !default;
+$color-yellow-800: #614d27 !default;
+$color-yellow-900: #523e21 !default;
+$color-yellow-1000: #3d3121 !default;
+$color-green-100: #e8fff7 !default;
+$color-green-200: #d6fff1 !default;
+$color-green-300: #b5f5e0 !default;
+$color-green-400: #8debcb !default;
+$color-green-500: #52d9ac !default;
+$color-green-600: #28bd8b !default;
+$color-green-700: #009f6a !default;
+$color-green-800: #067852 !default;
+$color-green-900: #1b5441 !default;
+$color-green-1000: #233b33 !default;
+$color-teal-100: #e3ffff !default;
+$color-teal-200: #ccffff !default;
+$color-teal-300: #96feff !default;
+$color-teal-400: #6ef4f5 !default;
+$color-teal-500: #37e4e6 !default;
+$color-teal-600: #13bebf !default;
+$color-teal-700: #199091 !default;
+$color-teal-800: #226363 !default;
+$color-teal-900: #274c4d !default;
+$color-teal-1000: #223a3b !default;
+$color-blue-100: #f2f8ff !default;
+$color-blue-200: #e8f3ff !default;
+$color-blue-300: #cce3ff !default;
+$color-blue-400: #abd2ff !default;
+$color-blue-500: #78b6ff !default;
+$color-blue-600: #429bff !default;
+$color-blue-700: #1273e6 !default;
+$color-blue-800: #0060cc !default;
+$color-blue-900: #1a497d !default;
+$color-blue-1000: #203752 !default;
+$color-purple-100: #f9f5ff !default;
+$color-purple-200: #f3ebff !default;
+$color-purple-300: #e5d4ff !default;
+$color-purple-400: #d7bdff !default;
+$color-purple-500: #bd91ff !default;
+$color-purple-600: #a469ff !default;
+$color-purple-700: #8c40ff !default;
+$color-purple-800: #7122e3 !default;
+$color-purple-900: #4c2e87 !default;
+$color-purple-1000: #352e4a !default;
+$color-magenta-100: #fff2f8 !default;
+$color-magenta-200: #ffe8f2 !default;
+$color-magenta-300: #ffcce3 !default;
+$color-magenta-400: #ffb0d3 !default;
+$color-magenta-500: #ff7db7 !default;
+$color-magenta-600: #f0549a !default;
+$color-magenta-700: #d1347a !default;
+$color-magenta-800: #992659 !default;
+$color-magenta-900: #782449 !default;
+$color-magenta-1000: #522338 !default;
+$color-red-100: #fff2f3 !default;
+$color-red-200: #ffebec !default;
+$color-red-300: #ffcfd1 !default;
+$color-red-400: #ffb5b9 !default;
+$color-red-500: #ff858b !default;
+$color-red-600: #ff5760 !default;
+$color-red-700: #d9363e !default;
+$color-red-800: #a12b2b !default;
+$color-red-900: #80252a !default;
+$color-red-1000: #5c2121 !default;
+$color-gray-100: #f5f8fa !default;
+$color-gray-200: #ebf0f5 !default;
+$color-gray-300: #d9e0e6 !default;
+$color-gray-400: #c5ced6 !default;
+$color-gray-500: #a2adb8 !default;
+$color-gray-600: #818e9a !default;
+$color-gray-700: #626f7a !default;
+$color-gray-800: #46525c !default;
+$color-gray-900: #39444d !default;
+$color-gray-1000: #2c353d !default;
+$color-white: #ffffff !default;
+$box-shadow-0: none !default;
+$box-shadow-100: 0px 1px 2px rgba(44, 53, 61, 0.2) !default;
+$box-shadow-200: 0px 2px 4px rgba(44, 53, 61, 0.2) !default;
+$box-shadow-300: 0px 4px 8px rgba(44, 53, 61, 0.2) !default;
+$box-shadow-400: 0px 8px 16px rgba(44, 53, 61, 0.2) !default;
+$z-index-auto: auto !default;
+$z-index-below: -1 !default;
+$z-index-default: 1 !default;
+$z-index-above: 10 !default;
+$z-index-overlay: 1000 !default;
+$font-family-sans: "Calibre", -apple-system, BlinkMacSystemFont, "San Francisco",
+"Segoe UI", Roboto, Helvetica, sans-serif !default;
+$font-family-monospace: "SFMono-Regular", Monaco, Consolas, "Lucida Console",
+monospace !default;
+$line-height-100: 1rem !default;
+$line-height-200: 1.25rem !default;
+$line-height-300: 1.5rem !default;
+$line-height-400: 1.75rem !default;
+$line-height-500: 2rem !default;
+$line-height-600: 2.5rem !default;
+$line-height-700: 3.5rem !default;
+$line-height-800: 4.25rem !default;
+$font-size-50: 0.75rem !default;
+$font-size-100: 0.875rem !default;
+$font-size-200: 1rem !default;
+$font-size-300: 1.125rem !default;
+$font-size-400: 1.25rem !default;
+$font-size-500: 1.5rem !default;
+$font-size-600: 2rem !default;
+$font-size-700: 2.75rem !default;
+$font-size-800: 3.5rem !default;
+$font-size-root: 16px !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semibold: 600 !default;
+$media-query-xs: 448px !default;
+$media-query-sm: 720px !default;
+$media-query-md: 960px !default;
+$media-query-lg: 1200px !default;
+$media-query-xl: 1440px !default;
+$motion-duration-fast: 0.15s !default;
+$motion-duration-medium: 0.3s !default;
+$motion-duration-slow: 0.7s !default;
+$motion-ease-in: cubic-bezier(0.35, 0, 0.7, 0.2) !default;
+$motion-ease-out: cubic-bezier(0, 0, 0.3, 1) !default;
+$motion-ease-in-out: cubic-bezier(0.4, 0, 0.3, 1) !default;
+$sizing-0: 0rem !default;
+$sizing-100: 0.25rem !default;
+$sizing-200: 0.5rem !default;
+$sizing-300: 0.75rem !default;
+$sizing-400: 1rem !default;
+$sizing-450: 1.25rem !default;
+$sizing-500: 1.5rem !default;
+$sizing-550: 1.75rem !default;
+$sizing-600: 2rem !default;
+$sizing-650: 2.5rem !default;
+$sizing-700: 3rem !default;
+$sizing-750: 3.5rem !default;
+$sizing-800: 4rem !default;
+$sizing-850: 6rem !default;
+$sizing-900: 10rem !default;
+$sizing-1000: 20rem !default;
+$sizing-1100: 28rem !default;
+$sizing-1150: 35rem !default;
+$sizing-1200: 45rem !default;
+$sizing-1300: 60rem !default;
+$sizing-1350: 66rem !default;
+$sizing-1400: 75rem !default;
+$sizing-1500: 90rem !default;
+$spacing-0: 0rem !default;
+$spacing-100: 0.25rem !default;
+$spacing-200: 0.5rem !default;
+$spacing-300: 0.75rem !default;
+$spacing-400: 1rem !default;
+$spacing-450: 1.25rem !default;
+$spacing-500: 1.5rem !default;
+$spacing-550: 1.75rem !default;
+$spacing-600: 2rem !default;
+$spacing-650: 2.5rem !default;
+$spacing-700: 3rem !default;
+$spacing-750: 3.5rem !default;
+$spacing-800: 4rem !default;
+$spacing-850: 6rem !default;
+$spacing-900: 10rem !default;
+
+$matchbox-tokens: (
+        "border-radius": (
+                "0": $border-radius-0,
+                "100": $border-radius-100,
+                "200": $border-radius-200,
+                "pill": $border-radius-pill,
+                "circle": $border-radius-circle
+        ),
+        "border-width": (
+                "0": $border-width-0,
+                "100": $border-width-100,
+                "200": $border-width-200
+        ),
+        "color": (
+                "brand": (
+                        "orange": $color-brand-orange,
+                        "gray": $color-brand-gray,
+                        "blue": $color-brand-blue
+                ),
+                "yellow": (
+                        "100": $color-yellow-100,
+                        "200": $color-yellow-200,
+                        "300": $color-yellow-300,
+                        "400": $color-yellow-400,
+                        "500": $color-yellow-500,
+                        "600": $color-yellow-600,
+                        "700": $color-yellow-700,
+                        "800": $color-yellow-800,
+                        "900": $color-yellow-900,
+                        "1000": $color-yellow-1000
+                ),
+                "green": (
+                        "100": $color-green-100,
+                        "200": $color-green-200,
+                        "300": $color-green-300,
+                        "400": $color-green-400,
+                        "500": $color-green-500,
+                        "600": $color-green-600,
+                        "700": $color-green-700,
+                        "800": $color-green-800,
+                        "900": $color-green-900,
+                        "1000": $color-green-1000
+                ),
+                "teal": (
+                        "100": $color-teal-100,
+                        "200": $color-teal-200,
+                        "300": $color-teal-300,
+                        "400": $color-teal-400,
+                        "500": $color-teal-500,
+                        "600": $color-teal-600,
+                        "700": $color-teal-700,
+                        "800": $color-teal-800,
+                        "900": $color-teal-900,
+                        "1000": $color-teal-1000
+                ),
+                "blue": (
+                        "100": $color-blue-100,
+                        "200": $color-blue-200,
+                        "300": $color-blue-300,
+                        "400": $color-blue-400,
+                        "500": $color-blue-500,
+                        "600": $color-blue-600,
+                        "700": $color-blue-700,
+                        "800": $color-blue-800,
+                        "900": $color-blue-900,
+                        "1000": $color-blue-1000
+                ),
+                "purple": (
+                        "100": $color-purple-100,
+                        "200": $color-purple-200,
+                        "300": $color-purple-300,
+                        "400": $color-purple-400,
+                        "500": $color-purple-500,
+                        "600": $color-purple-600,
+                        "700": $color-purple-700,
+                        "800": $color-purple-800,
+                        "900": $color-purple-900,
+                        "1000": $color-purple-1000
+                ),
+                "magenta": (
+                        "100": $color-magenta-100,
+                        "200": $color-magenta-200,
+                        "300": $color-magenta-300,
+                        "400": $color-magenta-400,
+                        "500": $color-magenta-500,
+                        "600": $color-magenta-600,
+                        "700": $color-magenta-700,
+                        "800": $color-magenta-800,
+                        "900": $color-magenta-900,
+                        "1000": $color-magenta-1000
+                ),
+                "red": (
+                        "100": $color-red-100,
+                        "200": $color-red-200,
+                        "300": $color-red-300,
+                        "400": $color-red-400,
+                        "500": $color-red-500,
+                        "600": $color-red-600,
+                        "700": $color-red-700,
+                        "800": $color-red-800,
+                        "900": $color-red-900,
+                        "1000": $color-red-1000
+                ),
+                "gray": (
+                        "100": $color-gray-100,
+                        "200": $color-gray-200,
+                        "300": $color-gray-300,
+                        "400": $color-gray-400,
+                        "500": $color-gray-500,
+                        "600": $color-gray-600,
+                        "700": $color-gray-700,
+                        "800": $color-gray-800,
+                        "900": $color-gray-900,
+                        "1000": $color-gray-1000
+                ),
+                "white": $color-white
+        ),
+        "box-shadow": (
+                "0": $box-shadow-0,
+                "100": $box-shadow-100,
+                "200": $box-shadow-200,
+                "300": $box-shadow-300,
+                "400": $box-shadow-400
+        ),
+        "z-index": (
+                "auto": $z-index-auto,
+                "below": $z-index-below,
+                "default": $z-index-default,
+                "above": $z-index-above,
+                "overlay": $z-index-overlay
+        ),
+        "font-family": (
+                "sans": $font-family-sans,
+                "monospace": $font-family-monospace
+        ),
+        "line-height": (
+                "100": $line-height-100,
+                "200": $line-height-200,
+                "300": $line-height-300,
+                "400": $line-height-400,
+                "500": $line-height-500,
+                "600": $line-height-600,
+                "700": $line-height-700,
+                "800": $line-height-800
+        ),
+        "font-size": (
+                "50": $font-size-50,
+                "100": $font-size-100,
+                "200": $font-size-200,
+                "300": $font-size-300,
+                "400": $font-size-400,
+                "500": $font-size-500,
+                "600": $font-size-600,
+                "700": $font-size-700,
+                "800": $font-size-800,
+                "root": $font-size-root
+        ),
+        "font-weight": (
+                "light": $font-weight-light,
+                "normal": $font-weight-normal,
+                "medium": $font-weight-medium,
+                "semibold": $font-weight-semibold
+        ),
+        "media-query": (
+                "xs": $media-query-xs,
+                "sm": $media-query-sm,
+                "md": $media-query-md,
+                "lg": $media-query-lg,
+                "xl": $media-query-xl
+        ),
+        "motion-duration": (
+                "fast": $motion-duration-fast,
+                "medium": $motion-duration-medium,
+                "slow": $motion-duration-slow
+        ),
+        "motion-ease": (
+                "in": $motion-ease-in,
+                "out": $motion-ease-out,
+                "in-out": $motion-ease-in-out
+        ),
+        "sizing": (
+                "0": $sizing-0,
+                "100": $sizing-100,
+                "200": $sizing-200,
+                "300": $sizing-300,
+                "400": $sizing-400,
+                "450": $sizing-450,
+                "500": $sizing-500,
+                "550": $sizing-550,
+                "600": $sizing-600,
+                "650": $sizing-650,
+                "700": $sizing-700,
+                "750": $sizing-750,
+                "800": $sizing-800,
+                "850": $sizing-850,
+                "900": $sizing-900,
+                "1000": $sizing-1000,
+                "1100": $sizing-1100,
+                "1150": $sizing-1150,
+                "1200": $sizing-1200,
+                "1300": $sizing-1300,
+                "1350": $sizing-1350,
+                "1400": $sizing-1400,
+                "1500": $sizing-1500
+        ),
+        "spacing": (
+                "0": $spacing-0,
+                "100": $spacing-100,
+                "200": $spacing-200,
+                "300": $spacing-300,
+                "400": $spacing-400,
+                "450": $spacing-450,
+                "500": $spacing-500,
+                "550": $spacing-550,
+                "600": $spacing-600,
+                "650": $spacing-650,
+                "700": $spacing-700,
+                "750": $spacing-750,
+                "800": $spacing-800,
+                "850": $spacing-850,
+                "900": $spacing-900
+        )
+);
+
+$DEFAULT_FONT_SIZE: $font-size-root;
+$DEFAULT_FONT_SIZE_UNITLESS: 16;
+
+@function rem($n) {
+  $result: 0rem + $n / $DEFAULT_FONT_SIZE_UNITLESS;
+  @return $result;
+}
+
+@function em($n) {
+  $result: 0em + $n / $DEFAULT_FONT_SIZE_UNITLESS;
+  @return $result;
+}
+
+@function border-radius($variant) {
+  $parent-map: map-get($matchbox-tokens, "border-radius");
+
+  @if map-has-key($parent-map, "#{$variant}") {
+    @return map-get($parent-map, "#{$variant}");
+  }
+
+  @error 'border-radius '#{$variant}' not found.';
+}
+
+@function border-width($variant) {
+  $parent-map: map-get($matchbox-tokens, "border-width");
+
+  @if map-has-key($parent-map, "#{$variant}") {
+    @return map-get($parent-map, "#{$variant}");
+  }
+
+  @error 'border-width '#{$variant}' not found.';
+}
+
+@function color($palette, $variant: 400) {
+  $color-map: map-get($matchbox-tokens, "color");
+
+  @if $palette == white {
+    @return map-get($color-map, "white");
+  }
+
+  @if map-has-key($color-map, "#{$palette}") {
+    $palette-map: map-get($color-map, "#{$palette}");
+    @return map-get($palette-map, "#{$variant}");
+  }
+
+  @error 'color' #{$palette} - #{$variant}' not found.';
+}
+
+@function box-shadow($variant) {
+  $parent-map: map-get($matchbox-tokens, "box-shadow");
+
+  @if map-has-key($parent-map, "#{$variant}") {
+    @return map-get($parent-map, "#{$variant}");
+  }
+
+  @error 'box-shadow '#{$variant}' not found.';
+}
+
+@function z-index($variant) {
+  $parent-map: map-get($matchbox-tokens, "z-index");
+
+  @if map-has-key($parent-map, "#{$variant}") {
+    @return map-get($parent-map, "#{$variant}");
+  }
+
+  @error 'z-index '#{$variant}' not found.';
+}
+
+@function font-family($variant) {
+  $parent-map: map-get($matchbox-tokens, "font-family");
+
+  @if map-has-key($parent-map, "#{$variant}") {
+    @return map-get($parent-map, "#{$variant}");
+  }
+
+  @error 'font-family '#{$variant}' not found.';
+}
+
+@function line-height($variant) {
+  $parent-map: map-get($matchbox-tokens, "line-height");
+
+  @if map-has-key($parent-map, "#{$variant}") {
+    @return map-get($parent-map, "#{$variant}");
+  }
+
+  @error 'line-height '#{$variant}' not found.';
+}
+
+@function font-size($variant) {
+  $parent-map: map-get($matchbox-tokens, "font-size");
+
+  @if map-has-key($parent-map, "#{$variant}") {
+    @return map-get($parent-map, "#{$variant}");
+  }
+
+  @error 'font-size '#{$variant}' not found.';
+}
+
+@function font-weight($variant) {
+  $parent-map: map-get($matchbox-tokens, "font-weight");
+
+  @if map-has-key($parent-map, "#{$variant}") {
+    @return map-get($parent-map, "#{$variant}");
+  }
+
+  @error 'font-weight '#{$variant}' not found.';
+}
+
+@function media-query($variant) {
+  $parent-map: map-get($matchbox-tokens, "media-query");
+
+  @if map-has-key($parent-map, "#{$variant}") {
+    @return map-get($parent-map, "#{$variant}");
+  }
+
+  @error 'media-query '#{$variant}' not found.';
+}
+
+@function motion-duration($variant) {
+  $parent-map: map-get($matchbox-tokens, "motion-duration");
+
+  @if map-has-key($parent-map, "#{$variant}") {
+    @return map-get($parent-map, "#{$variant}");
+  }
+
+  @error 'motion-duration '#{$variant}' not found.';
+}
+
+@function motion-ease($variant) {
+  $parent-map: map-get($matchbox-tokens, "motion-ease");
+
+  @if map-has-key($parent-map, "#{$variant}") {
+    @return map-get($parent-map, "#{$variant}");
+  }
+
+  @error 'motion-ease '#{$variant}' not found.';
+}
+
+@function sizing($variant) {
+  $parent-map: map-get($matchbox-tokens, "sizing");
+
+  @if map-has-key($parent-map, "#{$variant}") {
+    @return map-get($parent-map, "#{$variant}");
+  }
+
+  @error 'sizing '#{$variant}' not found.';
+}
+
+@function spacing($variant) {
+  $parent-map: map-get($matchbox-tokens, "spacing");
+
+  @if map-has-key($parent-map, "#{$variant}") {
+    @return map-get($parent-map, "#{$variant}");
+  }
+
+  @error 'spacing '#{$variant}' not found.';
 }
