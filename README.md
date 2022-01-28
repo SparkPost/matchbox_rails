@@ -48,6 +48,18 @@ If you want to use the gem in development as part of your Rails application loca
 
 `gem 'matchbox_rails', path: '/yourpath/matchbox_rails'`
 
+## Publish
+
+To publish a new version of this gem you need to be part of the TFE Engineering Team.
+
+First build the gem `gem build matchbox_rails.gemspec`
+
+Then use `gem push matchbox_rails-0.1.0.gem`
+
+Add your credentials.
+
+Done.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/sparkpost/matchbox_rails.
