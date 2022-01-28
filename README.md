@@ -27,6 +27,13 @@ After installing the gem you can add this line to your application.scss file:
 
 Now you can use the design tokens of Matchbox as SCSS variables.
 
+```scss
+.my-element {
+ background: color(blue, 700);
+ box-shadow: box-shadow(400);
+}
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests.
