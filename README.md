@@ -1,5 +1,9 @@
 # Matchbox for Rails
-Matchbox design tokens for Rails applications
+Matchbox design tokens for Rails applications.
+
+This gem is based on: [matchbox](https://github.com/SparkPost/matchbox)
+Matchbox is an open source design system and React component library, built for
+[SparkPost's UI](https://github.com/SparkPost/2web2ui)
 
 ## Installation
 
