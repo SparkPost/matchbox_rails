@@ -19,7 +19,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+After installing the gem you can add this line to your application.scss file:
+
+```scss
+@import "matchbox";
+```
+
+Now you can use the design tokens of Matchbox as SCSS variables.
 
 ## Development
 
