@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Taxi For Email Engineering Team"]
   spec.email         = ["product@taxiforemail.com"]
 
-  spec.summary       = %q{Use matchbox design system in your Rails application.}
+  spec.summary       = %q{Matchbox design tokens for Rails applications.}
   spec.description   = %q{Matchbox is the design system created by SparkPost.
                           A design system is a collection of reusable components, digital assets, guidelines, patterns,
                           and philosophies that follow clearly defined standards to manage design at scale.}
