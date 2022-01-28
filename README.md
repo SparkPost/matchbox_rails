@@ -40,6 +40,10 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 To install this gem onto your local machine, run `bundle exec rake install`.
 
+If you want to use the gem in development as part of your Rails application locally you can add it to your gemfile:
+
+`gem 'matchbox_rails', path: '/yourpath/matchbox_rails'`
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/sparkpost/matchbox_rails.
